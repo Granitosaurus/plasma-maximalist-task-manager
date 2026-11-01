@@ -157,7 +157,7 @@ QStringList Backend::alternativeIcons(const QUrl &launcherUrl)
     KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
 
     // Icon names or absolute paths offered in the "Change Icon" context menu.
-    return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("X-KDE-TaskManager-AlternativeIcons"));
+    return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("X-MaximalistTaskManager-AlternativeIcons"));
 }
 
 QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)

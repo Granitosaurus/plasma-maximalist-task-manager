@@ -26,10 +26,10 @@ It is a fork of Plasma's own Icons-Only Task Manager, so everything else looks a
 
 ### Suggesting icons for an app
 
-Add an `X-KDE-TaskManager-AlternativeIcons` key to the app's `.desktop` file (a local copy in `~/.local/share/applications/` works) with a list of icon names or absolute paths:
+Add an `X-MaximalistTaskManager-AlternativeIcons` key to the app's `.desktop` file (a local copy in `~/.local/share/applications/` works) with a list of icon names or absolute paths:
 
 ```ini
-X-KDE-TaskManager-AlternativeIcons=firefox-developer-edition;firefox-nightly;/home/me/icons/travel.svg;
+X-MaximalistTaskManager-AlternativeIcons=firefox-developer-edition;firefox-nightly;/home/me/icons/travel.svg;
 ```
 
 Apps without the key fall back to the widget-wide `iconOverridePresets` setting, which is empty by default.

@@ -159,7 +159,7 @@
       <default></default>
     </entry>
     <entry name="iconOverridePresets" type="StringList">
-      <label>Icon names offered in the "Change Icon" context menu for apps whose .desktop file has no X-KDE-TaskManager-AlternativeIcons key.</label>
+      <label>Icon names offered in the "Change Icon" context menu for apps whose .desktop file has no X-MaximalistTaskManager-AlternativeIcons key.</label>
       <default></default>
     </entry>
   </group>
