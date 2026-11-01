@@ -40,6 +40,8 @@ The widget is built from the Plasma **6.8.1** sources and uses private Plasma QM
 
 ## Installing
 
+Install a [release](https://github.com/Granitosaurus/plasma-maximalist-task-manager/releases) rather than `main`. Releases are tested on the Plasma version they name, while `main` may be mid-way through a Plasma upgrade. The examples below use v1.0.0 (Plasma 6.8).
+
 ### NixOS
 
 Add the flake as an input and its package to your system:
@@ -47,7 +49,7 @@ Add the flake as an input and its package to your system:
 ```nix
 {
   inputs.maximalist-task-manager = {
-    url = "github:granitosaurus/plasma-maximalist-task-manager";
+    url = "github:granitosaurus/plasma-maximalist-task-manager/v1.0.0";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -63,6 +65,8 @@ Add the flake as an input and its package to your system:
 Requires the development packages for Qt 6, KDE Frameworks 6, libplasma, plasma-activities(-stats), plasma-workspace (LibNotificationManager) and libksysguard.
 
 ```sh
+git clone --branch v1.0.0 https://github.com/Granitosaurus/plasma-maximalist-task-manager.git
+cd plasma-maximalist-task-manager
 cmake -B build -DCMAKE_INSTALL_PREFIX=/usr
 cmake --build build
 sudo cmake --install build
@@ -82,6 +86,12 @@ git -C ../plasma-desktop diff v6.8.1 v6.9.0 --relative=applets/taskmanager \
 ```
 
 Then fix any `*.rej` files, bump `PLASMA_BASE_VERSION` in `CMakeLists.txt`, and refresh `po/` from the new release.
+
+### Releasing
+
+1. Bump the version in `CMakeLists.txt`, `src/metadata.json` and `package.nix`, and the tag in the install examples above.
+2. Commit, then tag and push: `git tag -a vX.Y.Z -m "vX.Y.Z" && git push origin main vX.Y.Z`.
+3. Create the GitHub release from the tag. Tags matching `v*` are protected, so a published tag can't be moved or deleted.
 
 ## License
 

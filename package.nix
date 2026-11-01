@@ -2,7 +2,7 @@
 
 stdenv.mkDerivation {
   pname = "plasma-maximalist-task-manager";
-  version = "0.1.0";
+  version = "1.0.0";
 
   src = lib.cleanSource ./.;
 

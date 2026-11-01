@@ -16,7 +16,7 @@
         "Icon": "preferences-system-windows",
         "License": "GPL-2.0+",
         "Name": "Maximalist Task Manager",
-        "Version": "0.1.0",
+        "Version": "1.0.0",
         "Website": "https://github.com/granitosaurus/plasma-maximalist-task-manager"
     },
     "X-Plasma-API-Minimum-Version": "6.0",

@@ -3,7 +3,7 @@
 
 cmake_minimum_required(VERSION 3.22)
 
-project(plasma-maximalist-task-manager VERSION 0.1.0)
+project(plasma-maximalist-task-manager VERSION 1.0.0)
 
 # The Plasma release the sources in src/ were forked from. The widget uses
 # private Plasma QML modules, so it is only expected to work on this series.
