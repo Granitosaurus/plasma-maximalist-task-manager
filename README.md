@@ -15,7 +15,12 @@ It is a fork of Plasma's own Icons-Only Task Manager, so everything else looks a
 
   ![Giving two Firefox windows their own icons through Change Icon](docs/change-icon.gif)
 
-- **Cycle Icon of Active Window** global shortcut: steps the focused window through the same icons the menu offers, then back to the default. It is unbound by default; assign it in System Settings → Keyboard → Shortcuts → Plasma Workspace.
+  **Prefer the keyboard?** The **Cycle Icon of Active Window** shortcut does the same for the focused window. Each press switches it to the next icon from the menu, and after the last one back to its default icon. The shortcut has no key until you assign one:
+
+  1. Open **System Settings → Keyboard → Shortcuts**.
+  2. Select **Plasma Workspace** and search for "Cycle Icon".
+  3. Click **Add custom shortcut** and press the keys you want, e.g. <kbd>Meta</kbd>+<kbd>T</kbd>. KWin uses that one for "Toggle Window Titlebar and Frame" by default, so Settings will offer to reassign it.
+
 - Only the task manager is affected. Grouping, launchers and the window's app identity stay the same, and the titlebar and Alt+Tab keep the app's normal icon.
 - Overrides belong to a window and are forgotten once it closes, so nothing is left behind after restarts.
 
