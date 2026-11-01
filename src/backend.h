@@ -67,6 +67,7 @@ public:
 
     Q_INVOKABLE static QUrl tryDecodeApplicationsUrl(const QUrl &launcherUrl);
     Q_INVOKABLE static QStringList applicationCategories(const QUrl &launcherUrl);
+    Q_INVOKABLE static QStringList alternativeIcons(const QUrl &launcherUrl);
 
     int screen() const;
     void setScreen(int screen);

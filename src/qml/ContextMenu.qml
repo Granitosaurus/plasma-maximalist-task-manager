@@ -613,6 +613,66 @@ PlasmaExtras.Menu {
     }
 
     PlasmaExtras.MenuItem {
+        id: changeIconMenuItem
+
+        visible: (menu.visualParent && !menu.get(TaskManager.AbstractTasksModel.IsLauncher) && !menu.get(TaskManager.AbstractTasksModel.IsStartup))
+
+        enabled: visible
+
+        text: i18nc("@action:inmenu opens submenu", "Change &Icon")
+        icon: "edit-image"
+
+        readonly property PlasmaExtras.Menu _changeIconMenu: PlasmaExtras.Menu {
+            id: changeIconMenu
+
+            visualParent: changeIconMenuItem.action
+
+            function refresh(): void {
+                clearMenuItems();
+
+                if (!menu.visualParent) {
+                    return;
+                }
+
+                const winIds = menu.get(TaskManager.AbstractTasksModel.WinIdList);
+                const currentIcon = tasks.iconOverride(winIds);
+
+                // Prefer icons the app's .desktop file offers, then the widget-wide presets.
+                const appIcons = menu.backend.alternativeIcons(menu.get(TaskManager.AbstractTasksModel.LauncherUrlWithoutIcon));
+                const presets = appIcons.length > 0 ? appIcons : Plasmoid.configuration.iconOverridePresets;
+
+                let menuItem;
+                for (const preset of presets) {
+                    menuItem = menu.newMenuItem(changeIconMenu);
+                    // Show file paths by their base name.
+                    menuItem.text = preset.replace(/^.*\//, "").replace(/\.(svgz?|png)$/, "");
+                    menuItem.icon = preset;
+                    menuItem.checkable = true;
+                    menuItem.checked = preset === currentIcon;
+                    menuItem.clicked.connect(() => tasks.setIconOverride(winIds, preset));
+                }
+
+                if (presets.length > 0) {
+                    menu.newSeparator(changeIconMenu);
+                }
+
+                menuItem = menu.newMenuItem(changeIconMenu);
+                menuItem.text = i18nc("@action:inmenu", "&Choose…");
+                menuItem.icon = "document-open";
+                menuItem.clicked.connect(() => tasks.chooseIconOverride(winIds));
+
+                menuItem = menu.newMenuItem(changeIconMenu);
+                menuItem.text = i18nc("@action:inmenu", "&Reset to Default");
+                menuItem.icon = "edit-reset";
+                menuItem.enabled = currentIcon !== "";
+                menuItem.clicked.connect(() => tasks.setIconOverride(winIds, ""));
+            }
+
+            Component.onCompleted: refresh()
+        }
+    }
+
+    PlasmaExtras.MenuItem {
         id: moreActionsMenuItem
 
         visible: (menu.visualParent && !menu.get(TaskManager.AbstractTasksModel.IsLauncher) && !menu.get(TaskManager.AbstractTasksModel.IsStartup))

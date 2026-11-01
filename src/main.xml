@@ -154,6 +154,14 @@
       <label> Spacing between icons in task manager. Margin is multiplied by this value.</label>
       <default>1</default>
     </entry>
+    <entry name="windowIconOverrides" type="StringList">
+      <label>Per-window icon overrides as "windowId=icon" pairs. Entries for closed windows are dropped whenever the list is updated.</label>
+      <default></default>
+    </entry>
+    <entry name="iconOverridePresets" type="StringList">
+      <label>Icon names offered in the "Change Icon" context menu for apps whose .desktop file has no X-KDE-TaskManager-AlternativeIcons key.</label>
+      <default></default>
+    </entry>
   </group>
 
 </kcfg>

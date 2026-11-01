@@ -363,7 +363,7 @@ PlasmaCore.ToolTipArea {
         mainItem.pidParent = Qt.binding(() => model.AppPid);
         mainItem.windows = Qt.binding(() => model.WinIdList);
         mainItem.isGroup = Qt.binding(() => model.IsGroupParent);
-        mainItem.icon = Qt.binding(() => model.decoration);
+        mainItem.icon = Qt.binding(() => tasksRoot.iconOverride(model.WinIdList) || model.decoration);
         mainItem.launcherUrl = Qt.binding(() => model.LauncherUrlWithoutIcon);
         mainItem.isLauncher = Qt.binding(() => model.IsLauncher);
         mainItem.isMinimized = Qt.binding(() => model.IsMinimized);
@@ -576,7 +576,7 @@ PlasmaCore.ToolTipArea {
             active: task.highlighted
             enabled: true
 
-            source: task.model.decoration
+            source: task.tasksRoot.iconOverride(task.model.WinIdList) || task.model.decoration
         }
 
         states: [

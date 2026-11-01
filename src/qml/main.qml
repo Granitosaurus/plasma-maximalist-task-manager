@@ -5,6 +5,7 @@
 */
 pragma ComponentBehavior: Bound
 
+import QtCore
 import QtQuick
 import QtQuick.Layouts
 
@@ -20,6 +21,7 @@ import org.kde.plasma.workspace.trianglemousefilter
 import org.kde.taskmanager as TaskManager
 import plasma.applet.com.github.granitosaurus.maximalisttaskmanager as TaskManagerApplet
 import org.kde.plasma.workspace.dbus as DBus
+import org.kde.iconthemes as KIconThemes
 
 PlasmoidItem {
     id: tasks
@@ -547,6 +549,70 @@ PlasmoidItem {
         if (Plasmoid.immutability !== PlasmaCore.Types.SystemImmutable) {
             tasksModel.requestRemoveLauncher(url);
         }
+    }
+
+    // Per-window icon overrides, keyed by window id.
+    readonly property var windowIconOverrides: {
+        const overrides = {};
+        for (const entry of Plasmoid.configuration.windowIconOverrides) {
+            const separator = entry.indexOf("=");
+            if (separator > 0) {
+                overrides[entry.slice(0, separator)] = entry.slice(separator + 1);
+            }
+        }
+        return overrides;
+    }
+
+    function iconOverride(winIds: var): string {
+        for (const winId of winIds ?? []) {
+            const icon = windowIconOverrides[String(winId)];
+            if (icon) {
+                return icon;
+            }
+        }
+        return "";
+    }
+
+    // An empty icon removes the override.
+    function setIconOverride(winIds: var, icon: string): void {
+        const overrides = Object.assign({}, windowIconOverrides);
+        for (const winId of winIds) {
+            if (icon) {
+                overrides[String(winId)] = icon;
+            } else {
+                delete overrides[String(winId)];
+            }
+        }
+
+        // Window ids are not reused, so drop entries for windows that no longer exist.
+        const liveWinIds = new Set();
+        for (let i = 0; i < tasksModel.count; ++i) {
+            const ids = tasksModel.data(tasksModel.makeModelIndex(i), TaskManager.AbstractTasksModel.WinIdList) ?? [];
+            ids.forEach(winId => liveWinIds.add(String(winId)));
+        }
+
+        Plasmoid.configuration.windowIconOverrides = Object.keys(overrides)
+            .filter(winId => liveWinIds.has(winId))
+            .map(winId => `${winId}=${overrides[winId]}`);
+    }
+
+    // Lives here rather than in ContextMenu, which is destroyed as soon as it closes.
+    readonly property KIconThemes.IconDialog iconOverrideDialog: KIconThemes.IconDialog {
+        property var winIds: []
+
+        // Browse user-installed icons rather than the process's working directory.
+        customLocation: StandardPaths.writableLocation(StandardPaths.GenericDataLocation).toString().replace(/^file:\/\//, "") + "/icons"
+
+        onAccepted: {
+            if (iconName) {
+                tasks.setIconOverride(winIds, iconName);
+            }
+        }
+    }
+
+    function chooseIconOverride(winIds: var): void {
+        iconOverrideDialog.winIds = winIds;
+        iconOverrideDialog.open();
     }
 
     function activateTaskAtIndex(index: int): void {

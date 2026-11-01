@@ -146,6 +146,20 @@ QStringList Backend::applicationCategories(const QUrl &launcherUrl)
     return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("Categories"));
 }
 
+QStringList Backend::alternativeIcons(const QUrl &launcherUrl)
+{
+    const QUrl desktopEntryUrl = tryDecodeApplicationsUrl(launcherUrl);
+
+    if (!desktopEntryUrl.isValid() || !desktopEntryUrl.isLocalFile() || !KDesktopFile::isDesktopFile(desktopEntryUrl.toLocalFile())) {
+        return QStringList();
+    }
+
+    KDesktopFile desktopFile(desktopEntryUrl.toLocalFile());
+
+    // Icon names or absolute paths offered in the "Change Icon" context menu.
+    return desktopFile.desktopGroup().readXdgListEntry(QStringLiteral("X-KDE-TaskManager-AlternativeIcons"));
+}
+
 QVariantList Backend::jumpListActions(const QUrl &launcherUrl, QObject *parent)
 {
     QVariantList actions;
