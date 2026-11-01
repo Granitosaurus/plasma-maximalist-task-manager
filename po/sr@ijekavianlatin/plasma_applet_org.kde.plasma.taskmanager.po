@@ -1,0 +1,971 @@
+# Translation of plasma_applet_org.kde.plasma.taskmanager.po into Serbian.
+# Chusslove Illich <caslav.ilic@gmx.net>, 2007, 2008, 2009, 2010, 2011, 2013, 2015, 2016, 2017.
+# Nemanja Hiršl <nemhirsl@gmail.com>, 2026.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_org.kde.plasma.taskmanager\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-09-26 03:01+0000\n"
+"PO-Revision-Date: 2026-10-07 11:45+0200\n"
+"Last-Translator: Nemanja Hiršl <nemhirsl@gmail.com>\n"
+"Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
+"Language: sr@ijekavianlatin\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+"X-Environment: kde\n"
+
+#: backend.cpp:339
+#, kde-format
+msgctxt "Show all user Places"
+msgid "%1 more Place…"
+msgid_plural "%1 more Places…"
+msgstr[0] "Još %1 mjesto…"
+msgstr[1] "Još %1 mjesta…"
+msgstr[2] "Još %1 mjesta…"
+msgstr[3] "Još %1 mjesto…"
+
+#: backend.cpp:422
+#, kde-format
+msgid "Recent Downloads"
+msgstr "Nedavna preuzimanja"
+
+#: backend.cpp:424
+#, kde-format
+msgid "Recent Connections"
+msgstr "Nedavne veze"
+
+#: backend.cpp:426
+#, kde-format
+msgid "Recent Places"
+msgstr "Nedavna mjesta"
+
+#: backend.cpp:435
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Downloads"
+msgstr "Zaboravi nedavna preuzimanja"
+
+#: backend.cpp:437
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Connections"
+msgstr "Zaboravi nedavne veze"
+
+#: backend.cpp:439
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Places"
+msgstr "Zaboravi nedavna mjesta"
+
+#: backend.cpp:441
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Forget Recent Files"
+msgstr "Zaboravi nedavne fajlove"
+
+#: backend.cpp:581
+#, kde-format
+msgid "Activate Previous Task Manager Entry"
+msgstr "Aktiviraj prethodni unos menadžera zadataka"
+
+#: backend.cpp:588
+#, kde-format
+msgid "Activate Next Task Manager Entry"
+msgstr "Aktiviraj sljedeći unos menadžera zadataka"
+
+#: backend.cpp:595
+#, kde-format
+msgid "Move Active Task Manager Entry Backward"
+msgstr "Pomjeri aktivni unos menadžera zadataka unazad"
+
+#: backend.cpp:603
+#, kde-format
+msgid "Move Active Task Manager Entry Forward"
+msgstr "Pomjeri aktivni unos menadžera zadataka unaprijed"
+
+#: backend.cpp:612
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "Aktiviraj unos menadžera zadataka %1"
+
+#: qml/AudioStream.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Unmute"
+msgstr "Vrati zvuk"
+
+#: qml/AudioStream.qml:100
+#, kde-format
+msgctxt "@action:button"
+msgid "Mute"
+msgstr "Utišaj"
+
+#: qml/AudioStream.qml:101
+#, kde-format
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Unmute %1"
+msgstr "Vrati zvuk za %1"
+
+#: qml/AudioStream.qml:101
+#, kde-format
+msgctxt "@info:tooltip %1 is the window title"
+msgid "Mute %1"
+msgstr "Utišaj %1"
+
+#: qml/config.qml:13
+#, kde-format
+msgctxt "@title:group for configuration dialog page"
+msgid "Appearance"
+msgstr "Izgled"
+
+#: qml/config.qml:18
+#, kde-format
+msgctxt "@title:group for configuration dialog page"
+msgid "Behavior"
+msgstr "Ponašanje"
+
+#: qml/ConfigAppearance.qml:49
+#, kde-format
+msgctxt "@label for several checkboxes"
+msgid "General:"
+msgstr "Opšte:"
+
+#: qml/ConfigAppearance.qml:50
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Show small window previews when hovering over tasks"
+msgstr "Prikaži male preglede prozora pri lebdjenju nad zadacima"
+
+#: qml/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over previews"
+msgstr "Sakrij ostale prozore pri lebdjenju nad pregledima"
+
+#: qml/ConfigAppearance.qml:55
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Hide other windows when hovering over tooltips"
+msgstr "Sakrij ostale prozore pri lebdjenju nad oblačićima"
+
+#: qml/ConfigAppearance.qml:60
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Show an indicator when a task is playing audio"
+msgstr "Prikaži pokazatelj kad zadatak pušta zvuk"
+
+#: qml/ConfigAppearance.qml:70
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Mute task when clicking indicator"
+msgstr "Utišaj zadatak klikom na pokazatelj"
+
+#: qml/ConfigAppearance.qml:78
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Show media and volume controls in tooltip"
+msgstr "Prikaži upravljanje medijumima i jačinom u oblačiću"
+
+#: qml/ConfigAppearance.qml:86
+#, kde-format
+msgctxt "@option:check section General"
+msgid "Fill free space on panel"
+msgstr "Popuni slobodan prostor na panelu"
+
+#: qml/ConfigAppearance.qml:98
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Maximum task width:"
+msgstr "Najveća širina zadatka:"
+
+#: qml/ConfigAppearance.qml:101
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Narrow"
+msgstr "uska"
+
+#: qml/ConfigAppearance.qml:102
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Medium"
+msgstr "srednja"
+
+#: qml/ConfigAppearance.qml:103
+#, kde-format
+msgctxt "@item:inlistbox how wide a task item should be"
+msgid "Wide"
+msgstr "široka"
+
+#: qml/ConfigAppearance.qml:114
+#, kde-format
+msgctxt ""
+"@label for radio button group, completes sentence: … when panel is low on "
+"space etc."
+msgid "Use multi-column view:"
+msgstr "Koristi prikaz u više kolona:"
+
+#: qml/ConfigAppearance.qml:115
+#, kde-format
+msgctxt ""
+"@label for radio button group, completes sentence: … when panel is low on "
+"space etc."
+msgid "Use multi-row view:"
+msgstr "Koristi prikaz u više vrsta:"
+
+#: qml/ConfigAppearance.qml:121
+#, kde-format
+msgctxt "@option:radio Never use multi-column view for Task Manager"
+msgid "Never"
+msgstr "Nikad"
+
+#: qml/ConfigAppearance.qml:131
+#, kde-format
+msgctxt "@option:radio completes sentence: Use multi-column/row view"
+msgid "When panel is low on space and thick enough"
+msgstr "Kad panel nema dovoljno prostora, a dovoljno je širok"
+
+#: qml/ConfigAppearance.qml:141
+#, kde-format
+msgctxt "@option:radio completes sentence: Use multi-column/row view"
+msgid "Always when panel is thick enough"
+msgstr "Uvijek kad je panel dovoljno širok"
+
+#: qml/ConfigAppearance.qml:148
+#, kde-format
+msgctxt "@label:spinbox maximum number of columns for tasks"
+msgid "Maximum columns:"
+msgstr "Najviše kolona:"
+
+#: qml/ConfigAppearance.qml:149
+#, kde-format
+msgctxt "@label:spinbox maximum number of rows for tasks"
+msgid "Maximum rows:"
+msgstr "Najviše vrsta:"
+
+#: qml/ConfigAppearance.qml:159
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Spacing between icons:"
+msgstr "Razmak između ikonica:"
+
+# >> @item:inrange Icon size:
+#: qml/ConfigAppearance.qml:163
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "mali"
+
+#: qml/ConfigAppearance.qml:167
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "normalan"
+
+# >> @item:inrange Icon size:
+#: qml/ConfigAppearance.qml:171
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "veliki"
+
+#: qml/ConfigBehavior.qml:50
+#, kde-format
+msgctxt "@info"
+msgid ""
+"If you're using this setting to work around an application that demands "
+"attention too often, first look for a setting in the app to disable that "
+"behavior. If you don't find one, consider reporting this as a bug to the "
+"app's developer."
+msgstr ""
+"Ako ovom postavkom zaobilazite program koji prečesto traži pažnju, prvo u "
+"samom programu potražite postavku koja isključuje to ponašanje. Ako je ne "
+"nađete, razmislite da to prijavite kao grešku programeru tog programa."
+
+#: qml/ConfigBehavior.qml:66
+#, kde-format
+msgctxt "@label:listbox how to group tasks"
+msgid "Group:"
+msgstr "Grupisanje:"
+
+# >> @item:inlistbox Grouping
+#: qml/ConfigBehavior.qml:70
+#, kde-format
+msgctxt "@item:inlistbox how to group tasks"
+msgid "Do not group"
+msgstr "bez grupisanja"
+
+# >> @item:inlistbox Grouping
+#: qml/ConfigBehavior.qml:71
+#, kde-format
+msgctxt "@item:inlistbox how to group tasks"
+msgid "By program name"
+msgstr "po imenu programa"
+
+#: qml/ConfigBehavior.qml:77
+#, kde-format
+msgctxt "@label:listbox completes sentence like: … cycles through tasks"
+msgid "Clicking grouped task:"
+msgstr "Klik na grupisani zadatak:"
+
+#: qml/ConfigBehavior.qml:84
+#, kde-format
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task cycles through "
+"tasks' "
+msgid "Cycles through tasks"
+msgstr "kruži kroz zadatke"
+
+#: qml/ConfigBehavior.qml:85
+#, kde-format
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows small "
+"window previews' "
+msgid "Shows small window previews"
+msgstr "prikazuje male preglede prozora"
+
+#: qml/ConfigBehavior.qml:86
+#, kde-format
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows large "
+"window previews' "
+msgid "Shows large window previews"
+msgstr "prikazuje velike preglede prozora"
+
+#: qml/ConfigBehavior.qml:87
+#, kde-format
+msgctxt ""
+"@item:inlistbox Completes the sentence 'Clicking grouped task shows textual "
+"list' "
+msgid "Shows textual list"
+msgstr "prikazuje tekstualni spisak"
+
+#: qml/ConfigBehavior.qml:98
+#, kde-format
+msgctxt "@info displayed as InlineMessage"
+msgid ""
+"The compositor does not support displaying windows side by side, so a "
+"textual list will be displayed instead."
+msgstr ""
+"Slagač ne podržava prikazivanje prozora jedan uz drugi, pa će umjesto toga "
+"biti prikazan tekstualni spisak."
+
+#: qml/ConfigBehavior.qml:108
+#, kde-format
+msgctxt "@option:check grouped task"
+msgid "Combine into single button"
+msgstr "Spoji u jedno dugme"
+
+#: qml/ConfigBehavior.qml:115
+#, kde-format
+msgctxt "@option:check grouped task"
+msgid "Group only when the Task Manager is full"
+msgstr "Grupiši samo kada je menadžer zadataka pun"
+
+#: qml/ConfigBehavior.qml:127
+#, kde-format
+msgctxt "@label:listbox sort tasks in grouped task"
+msgid "Sort:"
+msgstr "Ređanje:"
+
+# >> @item:inlistbox Grouping
+#: qml/ConfigBehavior.qml:134
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "Do not sort"
+msgstr "bez ređanja"
+
+# >> @item:inlistbox Grouping
+# >> @item:inlistbox Sorting
+#: qml/ConfigBehavior.qml:138
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "Manually"
+msgstr "ručno"
+
+# >> @item:inlistbox Sorting
+#: qml/ConfigBehavior.qml:142
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "Alphabetically"
+msgstr "abecedno"
+
+# >> @item:inlistbox Sorting
+#: qml/ConfigBehavior.qml:146
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "By desktop"
+msgstr "po površi"
+
+# >> @item:inlistbox Sorting
+#: qml/ConfigBehavior.qml:150
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "By activity"
+msgstr "po aktivnosti"
+
+#: qml/ConfigBehavior.qml:154
+#, kde-format
+msgctxt "@item:inlistbox sort tasks in grouped task"
+msgid "By horizontal window position"
+msgstr "po vodoravnom položaju prozora"
+
+# >> @option:check
+#: qml/ConfigBehavior.qml:165
+#, kde-format
+msgctxt "@option:check configure task sorting"
+msgid "Keep launchers separate"
+msgstr "Drži pokretače razdvojeno"
+
+#: qml/ConfigBehavior.qml:172
+#, kde-format
+msgctxt "@option:check for icons-and-text task manager"
+msgid "Hide launchers after application startup"
+msgstr "Sakrij pokretače po pokretanju programa"
+
+#: qml/ConfigBehavior.qml:182
+#, kde-format
+msgctxt ""
+"@label for checkbox Part of a sentence: 'Clicking active task minimizes the "
+"task'"
+msgid "Clicking active task:"
+msgstr "Klik na aktivni zadatak:"
+
+#: qml/ConfigBehavior.qml:183
+#, kde-format
+msgctxt ""
+"@option:check Part of a sentence: 'Clicking active task minimizes the task'"
+msgid "Minimizes the task"
+msgstr "Minimizuje zadatak"
+
+#: qml/ConfigBehavior.qml:188
+#, kde-format
+msgctxt "@label:listbox completes sentence like: … does nothing"
+msgid "Middle-clicking any task:"
+msgstr "Srednji klik na bilo koji zadatak:"
+
+#: qml/ConfigBehavior.qml:192
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task does nothing'"
+msgid "Does nothing"
+msgstr "nema efekta"
+
+# >> @item:inlistbox On middle-click:
+#: qml/ConfigBehavior.qml:193
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task closes window "
+"or group'"
+msgid "Closes window or group"
+msgstr "zatvara prozor ili grupu"
+
+#: qml/ConfigBehavior.qml:194
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task opens a new "
+"window'"
+msgid "Opens a new window"
+msgstr "otvara novi prozor"
+
+# >> @item:inlistbox On middle-click:
+#: qml/ConfigBehavior.qml:195
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task minimizes/"
+"restores window or group'"
+msgid "Minimizes/Restores window or group"
+msgstr "minimizuje/obnavlja prozor ili grupu"
+
+#: qml/ConfigBehavior.qml:196
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task toggles "
+"grouping'"
+msgid "Toggles grouping"
+msgstr "uključuje/isključuje grupisanje"
+
+# >> @option:check
+#: qml/ConfigBehavior.qml:197
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Middle-clicking any task brings it to "
+"the current virtual desktop'"
+msgid "Brings it to the current virtual desktop"
+msgstr "dovodi ga na tekuću virtuelnu površ"
+
+#: qml/ConfigBehavior.qml:207
+#, kde-format
+msgctxt ""
+"@label:listbox Part of a sentence: 'Scrolling behavior does nothing/cycles "
+"through tasks/cycles through the selected task's windows/adjusts the hovered "
+"task’s volume''"
+msgid "Scrolling behavior:"
+msgstr "Klizanje:"
+
+#: qml/ConfigBehavior.qml:211
+#, kde-format
+msgctxt "@item:inlistbox Part of a sentence: 'Scrolling behavior does nothing'"
+msgid "Does nothing"
+msgstr "nema efekta"
+
+#: qml/ConfigBehavior.qml:212
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through all "
+"tasks'"
+msgid "Cycles through all tasks"
+msgstr "kruži kroz sve zadatke"
+
+#: qml/ConfigBehavior.qml:213
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling behavior cycles through the "
+"hovered task's windows'"
+msgid "Cycles through the hovered task’s windows"
+msgstr "kruži kroz prozore zadatka pod pokazivačem"
+
+#: qml/ConfigBehavior.qml:214
+#, kde-format
+msgctxt ""
+"@item:inlistbox Part of a sentence: 'Scrolling behavior adjusts the hovered "
+"task’s volume'"
+msgid "Adjusts the hovered task’s volume"
+msgstr "podešava jačinu zadatka pod pokazivačem"
+
+#: qml/ConfigBehavior.qml:222
+#, kde-format
+msgctxt "@option:check mouse wheel task cycling"
+msgid "Skip minimized tasks"
+msgstr "Preskoči minimizovane zadatke"
+
+# >> @option:check (checkbox following)
+#: qml/ConfigBehavior.qml:232
+#, kde-format
+msgctxt ""
+"@label for checkbox group, completes sentence like: … from current screen"
+msgid "Show only tasks:"
+msgstr "Prikaži samo zadatke:"
+
+#: qml/ConfigBehavior.qml:233
+#, kde-format
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "From the current desktop"
+msgstr "Sa tekuće površi"
+
+#: qml/ConfigBehavior.qml:238
+#, kde-format
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "From the current activity"
+msgstr "Iz tekuće aktivnosti"
+
+# >> @option:check
+#: qml/ConfigBehavior.qml:243
+#, kde-format
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "From the current screen"
+msgstr "Sa tekućeg ekrana"
+
+# >> @option:check
+#: qml/ConfigBehavior.qml:248
+#, kde-format
+msgctxt "@option:check completes sentence: show only tasks"
+msgid "That are minimized"
+msgstr "Koji su minimizovani"
+
+#: qml/ConfigBehavior.qml:257
+#, kde-format
+msgctxt ""
+"@label for checkbox, completes sentence: … unhide if window wants attention"
+msgid "When panel is hidden:"
+msgstr "Kad je panel skriven:"
+
+#: qml/ConfigBehavior.qml:258
+#, kde-format
+msgctxt "@option:check completes sentence: When panel is hidden"
+msgid "Unhide when a window wants attention"
+msgstr "Otkrij ga kad neki prozor traži pažnju"
+
+#: qml/ConfigBehavior.qml:273
+#, kde-format
+msgctxt "@label for radiobutton group completes sentence like: … on the bottom"
+msgid "New tasks appear:"
+msgstr "Novi zadaci se pojavljuju:"
+
+#: qml/ConfigBehavior.qml:277
+#, kde-format
+msgctxt "@option:check completes sentence: New tasks appear"
+msgid "On the bottom"
+msgstr "Na dnu"
+
+#: qml/ConfigBehavior.qml:281 qml/ConfigBehavior.qml:300
+#, kde-format
+msgctxt "@option:check completes sentence: New tasks appear"
+msgid "To the right"
+msgstr "Desno"
+
+#: qml/ConfigBehavior.qml:283 qml/ConfigBehavior.qml:298
+#, kde-format
+msgctxt "@option:check completes sentence: New tasks appear"
+msgid "To the left"
+msgstr "Lijevo"
+
+#: qml/ConfigBehavior.qml:294
+#, kde-format
+msgctxt "@option:check completes sentence: New tasks appear"
+msgid "On the top"
+msgstr "Na vrhu"
+
+#: qml/ContextMenu.qml:100
+#, kde-format
+msgctxt "@title:group for section of menu items"
+msgid "Places"
+msgstr "Mjesta"
+
+#: qml/ContextMenu.qml:106
+#, kde-format
+msgctxt "@title:group for section of menu items"
+msgid "Recent Files"
+msgstr "Nedavni fajlovi"
+
+#: qml/ContextMenu.qml:116
+#, kde-format
+msgctxt "@title:group for section of menu items"
+msgid "Actions"
+msgstr "Radnje"
+
+#: qml/ContextMenu.qml:163
+#, kde-format
+msgctxt "Play previous track"
+msgid "Previous Track"
+msgstr "Prethodna numera"
+
+#: qml/ContextMenu.qml:177
+#, kde-format
+msgctxt "Pause playback"
+msgid "Pause"
+msgstr "Pauziraj"
+
+#: qml/ContextMenu.qml:177
+#, kde-format
+msgctxt "Start playback"
+msgid "Play"
+msgstr "Pusti"
+
+#: qml/ContextMenu.qml:195
+#, kde-format
+msgctxt "Play next track"
+msgid "Next Track"
+msgstr "Sljedeća numera"
+
+#: qml/ContextMenu.qml:206
+#, kde-format
+msgctxt "Stop playback"
+msgid "Stop"
+msgstr "Zaustavi"
+
+#: qml/ContextMenu.qml:226
+#, kde-format
+msgctxt "Quit media player app"
+msgid "Quit"
+msgstr "Napusti"
+
+#: qml/ContextMenu.qml:241
+#, kde-format
+msgctxt "Open or bring to the front window of media player app"
+msgid "Restore"
+msgstr "Obnovi"
+
+#: qml/ContextMenu.qml:266
+#, kde-format
+msgctxt "@option:check inmenu, no separate unmute action"
+msgid "Mute"
+msgstr "Utišaj"
+
+#: qml/ContextMenu.qml:277
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Open New Window"
+msgstr "Otvori novi prozor"
+
+#: qml/ContextMenu.qml:293
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Move to &Desktop"
+msgstr "Premjesti na &površ"
+
+#: qml/ContextMenu.qml:323
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Move &To Current Desktop"
+msgstr "Premjesti na &tekuću površ"
+
+# >> @item:inmenu Move To Desktop
+#: qml/ContextMenu.qml:345
+#, kde-format
+msgctxt "action:inmenu"
+msgid "&All Desktops"
+msgstr "&Sve površi"
+
+# >> @item:inmenu Move To Desktop
+#: qml/ContextMenu.qml:373
+#, kde-format
+msgctxt "action:inmenu"
+msgid "&New Desktop"
+msgstr "&Nova površ"
+
+#: qml/ContextMenu.qml:393
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Show in &Activities"
+msgstr "Prikaži u &aktivnostima"
+
+#: qml/ContextMenu.qml:417
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Add To Current Activity"
+msgstr "Dodaj u tekuću aktivnost"
+
+#: qml/ContextMenu.qml:427
+#, kde-format
+msgctxt "action:inmenu"
+msgid "All Activities"
+msgstr "Sve aktivnosti"
+
+#: qml/ContextMenu.qml:483
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Move to %1"
+msgstr "Premjesti u %1"
+
+#: qml/ContextMenu.qml:509 qml/ContextMenu.qml:525
+#, kde-format
+msgctxt "action:inmenu"
+msgid "&Pin to Task Manager"
+msgstr "Pri&kači na menadžer zadataka"
+
+#: qml/ContextMenu.qml:577
+#, kde-format
+msgctxt "action:inmenu"
+msgid "On All Activities"
+msgstr "U svim aktivnostima"
+
+#: qml/ContextMenu.qml:583
+#, kde-format
+msgctxt "action:inmenu"
+msgid "On The Current Activity"
+msgstr "U tekućoj aktivnosti"
+
+#: qml/ContextMenu.qml:607
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Unpin from Task Manager"
+msgstr "Otkači sa menadžera zadataka"
+
+#: qml/ContextMenu.qml:622
+#, kde-format
+msgctxt "item:inmenu opens submenu"
+msgid "More"
+msgstr "Više"
+
+#: qml/ContextMenu.qml:631
+#, kde-format
+msgctxt "action:inmenu"
+msgid "&Move"
+msgstr "Po&mjeri"
+
+#: qml/ContextMenu.qml:640
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Re&size"
+msgstr "Promijeni &veličinu"
+
+#: qml/ContextMenu.qml:654
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Ma&ximize"
+msgstr "Ma&ksimizuj"
+
+#: qml/ContextMenu.qml:668
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Mi&nimize"
+msgstr "M&inimizuj"
+
+#: qml/ContextMenu.qml:678
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Keep &Above Others"
+msgstr "Drži iz&nad ostalih"
+
+#: qml/ContextMenu.qml:688
+#, kde-format
+msgctxt "action:inmenu"
+msgid "Keep &Below Others"
+msgstr "Drži is&pod ostalih"
+
+#: qml/ContextMenu.qml:700
+#, kde-format
+msgctxt "action:inmenu"
+msgid "&Fullscreen"
+msgstr "Preko &cijelog ekrana"
+
+#: qml/ContextMenu.qml:712
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&No Titlebar and Frame"
+msgstr "&Bez naslovne trake i okvira"
+
+#: qml/ContextMenu.qml:725
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Hide from Screencast"
+msgstr "&Sakrij od emitovanja ekrana"
+
+#: qml/ContextMenu.qml:741
+#, kde-format
+msgctxt "@option:check inmenu"
+msgid "Allow this program to be grouped"
+msgstr "Dozvoli grupisanje za ovaj program"
+
+#: qml/ContextMenu.qml:787
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Close All"
+msgstr "&Zatvori sve"
+
+#: qml/ContextMenu.qml:787
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Close"
+msgstr "&Zatvori"
+
+#: qml/Task.qml:158
+#, kde-format
+msgctxt "@info:usagetip %1 application name"
+msgid "Launch %1"
+msgstr "Pokreni %1|/|Pokreni $[aku %1]"
+
+#: qml/Task.qml:163
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "There is %1 new message."
+msgid_plural "There are %1 new messages."
+msgstr[0] "Ima %1 nova poruka."
+msgstr[1] "Ima %1 nove poruke."
+msgstr[2] "Ima %1 novih poruka."
+msgstr[3] "Ima jedna nova poruka."
+
+# >> @option:check (checkbox following)
+#: qml/Task.qml:171
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Show Task tooltip for %1"
+msgstr "Prikaži oblačić zadatka za %1"
+
+#: qml/Task.qml:175
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Show windows side by side for %1"
+msgstr "Prikaži prozore jedan uz drugi za %1"
+
+#: qml/Task.qml:180
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Open textual list of windows for %1"
+msgstr "Otvori tekstualni spisak prozora za %1"
+
+#: qml/Task.qml:184
+#, kde-format
+msgctxt "@info:usagetip %1 task name"
+msgid "Activate %1"
+msgstr "Aktiviraj %1"
+
+#: qml/TaskBadgeOverlay.qml:101
+#, kde-format
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "9k+"
+msgstr "9k+"
+
+#: qml/TaskBadgeOverlay.qml:104
+#, kde-format
+msgctxt ""
+"'k' is a suffix for 'thousand'; keep to one character or else the badge "
+"could overflow!"
+msgid "%1k"
+msgstr "%1k"
+
+# >> @item:inlistbox On middle-click:
+#: qml/ToolTipInstance.qml:212
+#, kde-format
+msgctxt "@info:tooltip Close this window"
+msgid "Close window"
+msgstr "Zatvori prozor"
+
+#: qml/ToolTipInstance.qml:426
+#, kde-format
+msgctxt "button to unmute app"
+msgid "Unmute %1"
+msgstr "Vrati zvuk za %1"
+
+#: qml/ToolTipInstance.qml:427
+#, kde-format
+msgctxt "button to mute app"
+msgid "Mute %1"
+msgstr "Utišaj %1"
+
+#: qml/ToolTipInstance.qml:445
+#, kde-format
+msgctxt "Accessibility data on volume slider"
+msgid "Adjust volume for %1"
+msgstr "Podesi jačinu za %1"
+
+# >> @item:inmenu Move To Desktop
+#: qml/ToolTipInstance.qml:461
+#, kde-format
+msgctxt "volume percentage"
+msgid "%1%"
+msgstr "%1%"
+
+#: qml/ToolTipInstance.qml:465
+#, kde-format
+msgctxt "only used for sizing, should be widest possible string"
+msgid "100%"
+msgstr "100%"
+
+# >> Which activity a window is currently on. Desktop name is either generic "Desktop %1" from kwin.po, or user supplied.
+#: qml/ToolTipInstance.qml:481
+#, kde-format
+msgctxt "Comma-separated list of desktops"
+msgid "On %1"
+msgstr "Na %1|/|Na $[lok %1]"
+
+#: qml/ToolTipInstance.qml:484
+#, kde-format
+msgctxt "Comma-separated list of desktops"
+msgid "Pinned to all desktops"
+msgstr "Prikačen na sve površi"
+
+#: qml/ToolTipInstance.qml:490
+#, kde-format
+msgctxt "Which virtual desktop a window is currently on"
+msgid "Available on all activities"
+msgstr "Dostupan u svim aktivnostima"
+
+#: qml/ToolTipInstance.qml:500
+#, kde-format
+msgctxt "Activities a window is currently on (apart from the current one)"
+msgid "Also available on %1"
+msgstr "Takođe dostupan u %1|/|Takođe dostupan u $[lok %1]"
+
+#: qml/ToolTipInstance.qml:504
+#, kde-format
+msgctxt "Which activities a window is currently on"
+msgid "Available on %1"
+msgstr "Dostupan u %1|/|Dostupan u $[lok %1]"
