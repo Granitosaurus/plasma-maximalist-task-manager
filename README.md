@@ -76,16 +76,18 @@ Then restart Plasma (`systemctl --user restart plasma-plasmashell`), right-click
 
 ## Maintaining the fork
 
-The first commit is an unmodified import of `applets/taskmanager` from plasma-desktop v6.8.1. The second commit makes it a standalone widget, and the commits after that add features. To move to a new Plasma release, apply the upstream changes to the applet with the plugin id renamed:
+The first commit is an unmodified import of `applets/taskmanager` from plasma-desktop v6.8.1. The second commit makes it a standalone widget, and the commits after that add features and upstream syncs ("Sync the task manager with Plasma …").
+
+**Currently synced with plasma-desktop v6.8.2.** To move to a newer release, apply the upstream changes since that tag, with the plugin id renamed:
 
 ```sh
-git -C ../plasma-desktop diff v6.8.1 v6.9.0 --relative=applets/taskmanager \
+git -C ../plasma-desktop diff v6.8.2 v6.9.0 --relative=applets/taskmanager \
   | sed -e 's/org\.kde\.plasma\.taskmanager/com.github.granitosaurus.maximalisttaskmanager/g' \
         -e 's/org\.kde\.plasma\.icontasks/com.github.granitosaurus.maximalisttaskmanager/g' \
   | git apply --reject --directory=src
 ```
 
-Then fix any `*.rej` files, bump `PLASMA_BASE_VERSION` in `CMakeLists.txt`, and refresh `po/` from the new release.
+Then fix any `*.rej` files and update the "currently synced" version above. For a new Plasma minor release (e.g. 6.9), also raise `PLASMA_BASE_VERSION` in `CMakeLists.txt` and refresh `po/`. Point releases (e.g. 6.8.2) usually don't need either.
 
 ### Releasing
 
