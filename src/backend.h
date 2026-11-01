@@ -92,6 +92,7 @@ Q_SIGNALS:
     void activateNextTaskRequested();
     void moveActiveTaskBackwardRequested();
     void moveActiveTaskForwardRequested();
+    void cycleActiveTaskIconRequested();
 
 private Q_SLOTS:
     void handleRecentDocumentAction() const;
@@ -104,6 +105,7 @@ private:
     static void dispatchActivateNextTask();
     static void dispatchMoveActiveTaskBackward();
     static void dispatchMoveActiveTaskForward();
+    static void dispatchCycleActiveTaskIcon();
 
     QVariantList systemSettingsActions(QObject *parent) const;
 

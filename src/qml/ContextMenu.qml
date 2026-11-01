@@ -637,9 +637,7 @@ PlasmaExtras.Menu {
                 const winIds = menu.get(TaskManager.AbstractTasksModel.WinIdList);
                 const currentIcon = tasks.iconOverride(winIds);
 
-                // Prefer icons the app's .desktop file offers, then the widget-wide presets.
-                const appIcons = menu.backend.alternativeIcons(menu.get(TaskManager.AbstractTasksModel.LauncherUrlWithoutIcon));
-                const presets = appIcons.length > 0 ? appIcons : Plasmoid.configuration.iconOverridePresets;
+                const presets = tasks.iconOverrideChoices(menu.get(TaskManager.AbstractTasksModel.LauncherUrlWithoutIcon));
 
                 let menuItem;
                 for (const preset of presets) {

@@ -618,6 +618,14 @@ void Backend::setupShortcuts()
         KGlobalAccel::self()->setGlobalShortcut(moveTaskForwardAction,
                                                 QList<QKeySequence>() << QKeySequence(Qt::META | Qt::CTRL | Qt::SHIFT | Qt::Key_PageDown));
 
+        // Named apart from the stock task manager's actions so the two widgets don't share it. Unbound by default.
+        auto *cycleIconAction = collection->addAction(QStringLiteral("maximalist cycle active window icon"));
+        QObject::connect(cycleIconAction, &QAction::triggered, collection, [](bool) {
+            dispatchCycleActiveTaskIcon();
+        });
+        cycleIconAction->setText(i18n("Cycle Icon of Active Window"));
+        KGlobalAccel::self()->setGlobalShortcut(cycleIconAction, QList<QKeySequence>());
+
         for (int i = 0; i < 10; ++i) {
             const int entryNumber = i + 1;
             const auto key = static_cast<Qt::Key>(Qt::Key_0 + (entryNumber % 10));
@@ -711,6 +719,13 @@ void Backend::dispatchMoveActiveTaskForward()
 {
     if (auto *target = findTargetBackend()) {
         Q_EMIT target->moveActiveTaskForwardRequested();
+    }
+}
+
+void Backend::dispatchCycleActiveTaskIcon()
+{
+    if (auto *target = findTargetBackend()) {
+        Q_EMIT target->cycleActiveTaskIconRequested();
     }
 }
 

@@ -262,6 +262,10 @@ PlasmoidItem {
         onMoveActiveTaskForwardRequested: () => {
             tasks.moveActiveTaskForward();
         }
+
+        onCycleActiveTaskIconRequested: () => {
+            tasks.cycleActiveTaskIcon();
+        }
     }
 
     DBus.DBusServiceWatcher {
@@ -613,6 +617,29 @@ PlasmoidItem {
     function chooseIconOverride(winIds: var): void {
         iconOverrideDialog.winIds = winIds;
         iconOverrideDialog.open();
+    }
+
+    // Prefer icons the app's .desktop file offers, then the widget-wide presets.
+    function iconOverrideChoices(launcherUrl: url): list<string> {
+        const appIcons = backend.alternativeIcons(launcherUrl);
+        return appIcons.length > 0 ? appIcons : Plasmoid.configuration.iconOverridePresets;
+    }
+
+    function cycleActiveTaskIcon(): void {
+        const activeTask = tasksModel.activeTask;
+        if (!activeTask.valid) {
+            return;
+        }
+
+        const winIds = tasksModel.data(activeTask, TaskManager.AbstractTasksModel.WinIdList) ?? [];
+        const choices = iconOverrideChoices(tasksModel.data(activeTask, TaskManager.AbstractTasksModel.LauncherUrlWithoutIcon));
+        if (winIds.length === 0 || choices.length === 0) {
+            return;
+        }
+
+        // The default icon follows the last choice. An icon picked through "Choose…" restarts at the first.
+        const next = choices.indexOf(iconOverride(winIds)) + 1;
+        setIconOverride(winIds, next < choices.length ? choices[next] : "");
     }
 
     function activateTaskAtIndex(index: int): void {
