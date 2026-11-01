@@ -12,6 +12,9 @@ It is a fork of Plasma's own Icons-Only Task Manager, so everything else looks a
   - pick an icon from the app's suggested alternatives or your presets
   - **Choose…** any icon through the standard icon picker
   - **Reset to Default**
+
+  ![Giving two Firefox windows their own icons through Change Icon](docs/change-icon.gif)
+
 - Only the task manager is affected. Grouping, launchers and the window's app identity stay the same, and the titlebar and Alt+Tab keep the app's normal icon.
 - Overrides belong to a window and are forgotten once it closes, so nothing is left behind after restarts.
 
