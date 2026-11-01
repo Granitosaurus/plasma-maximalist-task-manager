@@ -18,7 +18,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.workspace.trianglemousefilter
 
 import org.kde.taskmanager as TaskManager
-import plasma.applet.org.kde.plasma.taskmanager as TaskManagerApplet
+import plasma.applet.com.github.granitosaurus.maximalisttaskmanager as TaskManagerApplet
 import org.kde.plasma.workspace.dbus as DBus
 
 PlasmoidItem {
@@ -32,7 +32,7 @@ PlasmoidItem {
 
     readonly property bool shouldShrinkToZero: tasksModel.count === 0
     readonly property bool vertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
-    readonly property bool iconsOnly: Plasmoid.pluginName === "org.kde.plasma.icontasks"
+    readonly property bool iconsOnly: Plasmoid.pluginName === "com.github.granitosaurus.maximalisttaskmanager"
 
     property Task toolTipOpenedByClick
     property Task toolTipAreaItem

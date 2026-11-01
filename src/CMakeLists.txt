@@ -1,6 +1,6 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.taskmanager\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_com.github.granitosaurus.maximalisttaskmanager\")
 
-plasma_add_applet(org.kde.plasma.taskmanager
+plasma_add_applet(com.github.granitosaurus.maximalisttaskmanager
     QML_SOURCES
         qml/AudioStream.qml
         qml/ConfigAppearance.qml
@@ -33,15 +33,15 @@ plasma_add_applet(org.kde.plasma.taskmanager
     GENERATE_APPLET_CLASS
 )
 
-kconfig_add_kcfg_files(org.kde.plasma.taskmanager ${CMAKE_SOURCE_DIR}/kcms/recentFiles/kactivitymanagerd_plugins_settings.kcfgc)
+kconfig_add_kcfg_files(com.github.granitosaurus.maximalisttaskmanager ${CMAKE_CURRENT_SOURCE_DIR}/kcfg/kactivitymanagerd_plugins_settings.kcfgc)
 
-ecm_qt_declare_logging_category(org.kde.plasma.taskmanager
+ecm_qt_declare_logging_category(com.github.granitosaurus.maximalisttaskmanager
     HEADER log_settings.h
     IDENTIFIER TASKMANAGER_DEBUG
-    CATEGORY_NAME org.kde.plasma.taskmanager)
+    CATEGORY_NAME com.github.granitosaurus.maximalisttaskmanager)
 
 # FIXME Cleanup no longer used libs.
-target_link_libraries(org.kde.plasma.taskmanager PRIVATE
+target_link_libraries(com.github.granitosaurus.maximalisttaskmanager PRIVATE
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
