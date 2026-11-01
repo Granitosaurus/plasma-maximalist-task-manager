@@ -40,7 +40,7 @@ The widget is built from the Plasma **6.8.1** sources and uses private Plasma QM
 
 ## Installing
 
-Install a [release](https://github.com/Granitosaurus/plasma-maximalist-task-manager/releases) rather than `main`. Releases are tested on the Plasma version they name, while `main` may be mid-way through a Plasma upgrade. The examples below use v1.0.0 (Plasma 6.8).
+Install a [release](https://github.com/Granitosaurus/plasma-maximalist-task-manager/releases) rather than `main`. Releases are tested on the Plasma version they name, while `main` may be mid-way through a Plasma upgrade. The examples below use v1.0.1 (Plasma 6.8).
 
 ### NixOS
 
@@ -49,7 +49,7 @@ Add the flake as an input and its package to your system:
 ```nix
 {
   inputs.maximalist-task-manager = {
-    url = "github:granitosaurus/plasma-maximalist-task-manager/v1.0.0";
+    url = "github:granitosaurus/plasma-maximalist-task-manager/v1.0.1";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 
@@ -65,7 +65,7 @@ Add the flake as an input and its package to your system:
 Requires the development packages for Qt 6, KDE Frameworks 6, libplasma, plasma-activities(-stats), plasma-workspace (LibNotificationManager) and libksysguard.
 
 ```sh
-git clone --branch v1.0.0 https://github.com/Granitosaurus/plasma-maximalist-task-manager.git
+git clone --branch v1.0.1 https://github.com/Granitosaurus/plasma-maximalist-task-manager.git
 cd plasma-maximalist-task-manager
 cmake -B build -DCMAKE_INSTALL_PREFIX=/usr
 cmake --build build
